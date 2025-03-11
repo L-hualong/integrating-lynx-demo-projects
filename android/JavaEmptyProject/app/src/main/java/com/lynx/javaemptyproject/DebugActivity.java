@@ -18,6 +18,9 @@ public class DebugActivity extends AppCompatActivity {
         String url = getIntent().getStringExtra("url");
         if (url != null) {
             lynxView.renderTemplateUrl(url, TemplateData.empty());
+        } else {
+            url = "main.lynx.bundle";
+            lynxView.renderTemplateUrl(url, "");
         }
     }
     private LynxView buildLynxView() {
